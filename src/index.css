@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --desat-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --bg-gradient: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  --text-color-1: hsl(237, 12%, 33%);
+  --text-color-2: hsl(240, 6%, 50%);
+  --divider-color: hsl(240, 5%, 91%);
+  --body-copy-size: 12px;
+  --font-weight-1: 400;
+  --font-weight-2: 700;
+}
+
 html, body {
   background-image: url('./images/bg-pattern-mobile.svg');
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
   margin: inherit;

@@ -2,16 +2,19 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 
 const FaqContainer = styled.div`
+ background: var(--bg-gradient);
 @media (min-width: 768px) {
-  background-color: rebeccapurple;
-  width: 90rem;
+  width: 90vw;
   height: 90vh;
   margin: 10rem auto;
 }
 `;
 
-const Accordion = styled.div`
+const AccordionContainer = styled.div`
+display: grid;
+grid-template-columns: 1fr;
 @media (min-width: 768px) {
+  grid-template-columns: 1fr 1fr;
   position: relative;
   top: 10%;
   bottom: 0;
@@ -21,7 +24,19 @@ const Accordion = styled.div`
   border-radius: 30px;
   margin: 0 auto;
 }
+`;
 
+const FaqTitle = styled.h1`
+  color: #000;
+  padding: 1.5em;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: var(--font-weight-2);
+`;
+
+const ImgContainer = styled.div`
+  background: orange;
+  height: 100%;
+  width: 100%;
 `;
 
 const App = () => {
@@ -36,13 +51,13 @@ const App = () => {
   };
 
   return (
-    <div>
-      <FaqContainer>
-        <Accordion>
+    <FaqContainer>
+      <AccordionContainer>
+      <ImgContainer></ImgContainer>
+        <FaqTitle>FAQ</FaqTitle>
           {/* Handle accordion state */}
-          </Accordion>
-      </FaqContainer>
-    </div>
+          </AccordionContainer>
+    </FaqContainer>
   )
 }
 
