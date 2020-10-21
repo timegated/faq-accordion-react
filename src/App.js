@@ -1,28 +1,18 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import womanDesktop from './images/illustration-woman-online-desktop.svg';
 
-const FaqContainer = styled.div`
- background: var(--bg-gradient);
-@media (min-width: 768px) {
-  width: 90vw;
-  height: 90vh;
-  margin: 10rem auto;
-}
-`;
 
 const AccordionContainer = styled.div`
 display: grid;
 grid-template-columns: 1fr;
 @media (min-width: 768px) {
   grid-template-columns: 1fr 1fr;
-  position: relative;
-  top: 10%;
-  bottom: 0;
   background: #FFF;
-  width: 75%;
-  height: 80%;
+  width: 90rem;
+  height: 80vh;
   border-radius: 30px;
-  margin: 0 auto;
+  margin: 10rem auto;
 }
 `;
 
@@ -34,7 +24,7 @@ const FaqTitle = styled.h1`
 `;
 
 const ImgContainer = styled.div`
-  background: orange;
+  border-radius: 30px 0 0 30px;
   height: 100%;
   width: 100%;
 `;
@@ -51,13 +41,14 @@ const App = () => {
   };
 
   return (
-    <FaqContainer>
       <AccordionContainer>
-      <ImgContainer></ImgContainer>
+        <ImgContainer>
+        <img src={womanDesktop} alt="Woman using a desktop"/>
+        </ImgContainer>
         <FaqTitle>FAQ</FaqTitle>
           {/* Handle accordion state */}
-          </AccordionContainer>
-    </FaqContainer>
+      </AccordionContainer>
+  
   )
 }
 

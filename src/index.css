@@ -12,21 +12,13 @@
   --font-weight-2: 700;
 }
 
-html, body {
-  background-image: url('./images/bg-pattern-mobile.svg');
+ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: inherit;
-  padding: inherit;
-}
-
-@media (min-width: 768px) {
-  html, body {
-    background-image: url('./images/bg-pattern-desktop.svg');
-  }
+  height: 100%;
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
