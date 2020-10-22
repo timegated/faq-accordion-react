@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const AccordionContainer = styled.div`
 display: flex;
 align-items: center;
+box-shadow: 1px 1px 5px #000;
 @media (min-width: 768px) {
   background: #FFF;
   width: 90rem;
