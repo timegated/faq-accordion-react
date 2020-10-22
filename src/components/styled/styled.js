@@ -7,6 +7,7 @@ align-items: center;
 @media (min-width: 768px) {
   background: #FFF;
   width: 90rem;
+  height: 75vh;
   border-radius: 30px;
   margin: 5rem auto;
 }
