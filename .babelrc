@@ -4,5 +4,6 @@
       "useBuiltIns": "entry"
     }
   ],
-  "@babel/preset-react"]
+  "@babel/preset-react"],
+  "plugins":["babel-plugin-styled-components"]
 }

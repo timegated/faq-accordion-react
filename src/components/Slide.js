@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import { ListParent, ListChild, ListIcon, ListButton } from './styled/styled';
 import iconArrow from '../images/icon-arrow-down.svg';
-
-const ListParent = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-
-const ListChild = styled.li`
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  padding: 1.5rem;
-  width: 75%;
-  border-bottom: 1px solid var(--divider-color);
-`;
-
-const ListIcon = styled.span`
-`;
-
-const ListButton = styled.a`
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-`;
-
 
 const Slide = () => {
   const [clicked, setClicked] = useState({
@@ -34,7 +8,7 @@ const Slide = () => {
   });
 
   const handleClick = (e) => {
-    setClicked({ clicked: true });
+    setClicked({ ...clicked , clicked: true });
     e.preventDefault();
   };
   console.log(clicked);
