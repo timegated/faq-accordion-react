@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Slide from './components/Slide';
 import styled from 'styled-components';
 import womanDesktop from './images/illustration-woman-online-desktop.svg';
 
@@ -15,7 +16,6 @@ grid-template-columns: 1fr;
   margin: 10rem auto;
 }
 `;
-
 const FaqTitle = styled.h1`
   color: #000;
   padding: 1.5em;
@@ -44,10 +44,12 @@ const App = () => {
       <AccordionContainer>
         <ImgContainer>
         <img src={womanDesktop} alt="Woman using a desktop"/>
-        </ImgContainer>
+      </ImgContainer>
+      <div>
         <FaqTitle>FAQ</FaqTitle>
-          {/* Handle accordion state */}
-      </AccordionContainer>
+        <Slide />
+      </div>
+    </AccordionContainer>
   
   )
 }
