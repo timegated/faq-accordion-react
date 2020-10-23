@@ -7,14 +7,14 @@ align-items: center;
 box-shadow: 1px 1px 5px #000;
 @media (min-width: 768px) {
   background: #FFF;
-  width: 90rem;
-  height: 75vh;
+  width: 75rem;
+  height: 65vh;
   border-radius: 30px;
   margin: 5rem auto;
 }
 `;
 export const FaqContainer = styled.div`
-  flex: 1;
+  flex: 1 0 50%;
 `;
 export const FaqTitle = styled.h1`
   color: #000;
@@ -24,8 +24,7 @@ export const FaqTitle = styled.h1`
 `;
 
 export const ImgContainer = styled.div`
-  border-radius: 30px 0 0 30px;
-  flex: 1;
+  flex: 1 0  50%;
 `;
 
 // Slider
@@ -38,20 +37,26 @@ export const ListParent = styled.ul`
 
 
 export const ListChild = styled.li`
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  padding: 1.5rem;
-  width: 75%;
+  padding: 0.75rem;
+  width: 65%;
   border-bottom: 1px solid var(--divider-color);
 `;
 
-export const ListIcon = styled.span`
+
+
+export const ListLink = styled.a`
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--text-color-1);
+  cursor: pointer;
+  &:hover {
+    color: var(--soft-red);
+  }
+  
 `;
 
-export const ListButton = styled.a`
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-`;
+export const ListIcon = styled.img`
+width: 15px;
+height: 10px;
+`

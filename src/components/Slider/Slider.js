@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Slider.module.css';
 import iconArrow from '../../images/icon-arrow-down.svg';
+import { ListParent, ListChild, ListLink, ListIcon } from '../styled/styled';
 
 const Slider = () => {
   const [questions, showQuestions] = useState([
@@ -48,15 +49,18 @@ const Slider = () => {
 
   return (
     <>
+      <ListParent>
       {questions.map((question, index) => {
-        return <li className={styles.ListChild} key={question.id}>
-          {question.text}
-          <button className={styles.ListButton} onClick={(e) => handleClick(e, question.id)}>
-          <img className={styles.ListIcon} src={iconArrow} alt="arrow down" />  
-          </button>
+        return <ListChild key={question.id}>
+          <ListLink href="#" rel="noopener noreferrer" onClick={(e) => handleClick(e, question.id)} >
+            {question.text}
+            <ListIcon src={iconArrow} alt="arrow down" />
+          </ListLink>
+          
           {questions[index]['visible'] ? <p className={styles.CopyText}>{question.copy}</p> : ''}
-        </li>
+        </ListChild>
       })}
+      </ListParent>
     </>
   )
 };

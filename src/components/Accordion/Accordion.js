@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from '../Slider/Slider';
-import styles from './Accordion.module.css';
 import womanDesktop from '../../images/illustration-woman-online-desktop.svg';
+import { AccordionContainer, FaqContainer, FaqTitle, ImgContainer } from '../styled/styled';
 
 const Accordion = () => {  
   return (
-    <div className={styles.Container}>
-      <div className={styles.ImgContainer}>
+    <AccordionContainer>
+      <ImgContainer>
         <img src={womanDesktop} alt="woman accessing internet with desktop" srcSet=""/>
-      </div>
-      <div className={styles.FaqContainer}>
-        <h1 className={styles.FaqTitle}>FAQ</h1>
-        <ul>
+      </ImgContainer>
+      <FaqContainer>
+        <FaqTitle>FAQ</FaqTitle>
           <Slider />
-        </ul>
-      </div>
-    </div>
+      </FaqContainer>
+    </AccordionContainer>
   )
 }
 
