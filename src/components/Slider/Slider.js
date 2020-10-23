@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Slider.module.css';
 import iconArrow from '../../images/icon-arrow-down.svg';
-import { ListParent, ListChild, ListLink, ListIcon } from '../styled/styled';
+import { ListParent, ListChild, ListLink, ListIcon, ListIconActive, CopyText } from '../styled/styled';
 
 const Slider = () => {
   const [questions, showQuestions] = useState([
@@ -54,10 +54,9 @@ const Slider = () => {
         return <ListChild key={question.id}>
           <ListLink href="#" rel="noopener noreferrer" onClick={(e) => handleClick(e, question.id)} >
             {question.text}
-            <ListIcon src={iconArrow} alt="arrow down" />
+          {questions[index]['visible'] ? <ListIconActive src={iconArrow} alt="arrow up" />: <ListIcon src={iconArrow} alt="arrow down" /> }  
           </ListLink>
-          
-          {questions[index]['visible'] ? <p className={styles.CopyText}>{question.copy}</p> : ''}
+          {questions[index]['visible'] ? <CopyText>{question.copy}</CopyText> : ''}
         </ListChild>
       })}
       </ListParent>

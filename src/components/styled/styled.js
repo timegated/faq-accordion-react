@@ -57,6 +57,17 @@ export const ListLink = styled.a`
 `;
 
 export const ListIcon = styled.img`
-width: 15px;
-height: 10px;
+  width: 15px;
+  height: 10px;
+  
 `
+
+export const ListIconActive = styled.img`
+  width: 15px;
+  height: 10px;
+  transform: rotate(180deg);
+`;
+
+export const CopyText = styled.p`
+  max-width: 32em;
+`;
