@@ -3,9 +3,7 @@ import Slider from '../Slider/Slider';
 import styles from './Accordion.module.css';
 import womanDesktop from '../../images/illustration-woman-online-desktop.svg';
 
-const Accordion = () => {
-  const [showAll, setShowAll] = useState('');
-  
+const Accordion = () => {  
   return (
     <div className={styles.Container}>
       <div className={styles.ImgContainer}>
