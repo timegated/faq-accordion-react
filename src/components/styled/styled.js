@@ -1,30 +1,50 @@
 import styled from 'styled-components';
-
+import backgroundDesktop from '../../images/bg-pattern-desktop.svg';
 // App
 export const AccordionContainer = styled.div`
 display: flex;
 align-items: center;
-box-shadow: 1px 1px 5px #000;
+box-shadow: 1px 1px 10px #000;
+
 @media (min-width: 768px) {
-  background: #FFF;
+  background-color: #FFF;
+  background-image: url(${backgroundDesktop});
+  background-size: left;
+  background-repeat: no-repeat;
+  background-position: -300px -100px;
   width: 75rem;
-  height: 65vh;
+  height: 85vh;
   border-radius: 30px;
   margin: 5rem auto;
 }
 `;
+
 export const FaqContainer = styled.div`
   flex: 1 0 50%;
+  height: 65vh;
 `;
+
 export const FaqTitle = styled.h1`
-  color: #000;
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  color: var(--desat-blue);
+  /* padding: 1.5rem 1.5rem 0 1.5rem; */
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: var(--font-weight-2);
 `;
 
 export const ImgContainer = styled.div`
   flex: 1 0  50%;
+`;
+
+export const DesktopBox = styled.img`
+  position: absolute;
+  top: 430px;
+  left: 330px;
+  animation: 3s infinite bounce;
+  @keyframes bounce {
+    50% {
+      transform: translateY(3%);
+    }
+  }
 `;
 
 // Slider
@@ -59,7 +79,6 @@ export const ListLink = styled.a`
 export const ListIcon = styled.img`
   width: 15px;
   height: 10px;
-  
 `
 
 export const ListIconActive = styled.img`
@@ -70,4 +89,5 @@ export const ListIconActive = styled.img`
 
 export const CopyText = styled.p`
   max-width: 32em;
+  color: var(--text-color-2);
 `;
