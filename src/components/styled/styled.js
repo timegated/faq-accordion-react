@@ -1,12 +1,36 @@
 import styled from 'styled-components';
 import backgroundDesktop from '../../images/bg-pattern-desktop.svg';
+
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '1920px',
+  desktopL: '2560px'
+}
+
+const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktopL})`,
+}
 // App
 export const AccordionContainer = styled.div`
 display: flex;
+flex-direction: column;
 align-items: center;
 box-shadow: 1px 1px 10px #000;
 
 @media (min-width: 768px) {
+  flex-direction: row;
   background-color: #FFF;
   background-image: url(${backgroundDesktop});
   background-size: left;
@@ -43,6 +67,10 @@ export const DesktopBox = styled.img`
     50% {
       transform: translateY(3%);
     }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 
