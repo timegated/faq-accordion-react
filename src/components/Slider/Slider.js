@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './Slider.module.css';
 import iconArrow from '../../images/icon-arrow-down.svg';
 import { ListParent, ListChild, ListLink, ListIcon, ListIconActive, CopyText } from '../styled/styled';
 

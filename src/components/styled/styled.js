@@ -26,7 +26,6 @@ export const FaqContainer = styled.div`
 
 export const FaqTitle = styled.h1`
   color: var(--desat-blue);
-  /* padding: 1.5rem 1.5rem 0 1.5rem; */
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: var(--font-weight-2);
 `;
@@ -36,9 +35,9 @@ export const ImgContainer = styled.div`
 `;
 
 export const DesktopBox = styled.img`
-  position: absolute;
-  top: 430px;
-  left: 330px;
+  position: fixed;
+  top: 45%;
+  left: 17%;
   animation: 3s infinite bounce;
   @keyframes bounce {
     50% {
@@ -90,4 +89,17 @@ export const ListIconActive = styled.img`
 export const CopyText = styled.p`
   max-width: 32em;
   color: var(--text-color-2);
+  animation: 1s ease-in slidedown;
+
+  @keyframes slidedown {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;

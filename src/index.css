@@ -16,7 +16,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100vh;
   overflow-y: hidden;
   background: var(--bg-gradient);
   background-repeat: no-repeat;
