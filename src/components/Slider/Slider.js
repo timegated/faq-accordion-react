@@ -19,7 +19,7 @@ const Slider = () => {
     {
       id:2,
       text: 'How do I reset my password?',
-      copy: 'Click “orgot password” from the login page or “Change password” from your profile page. A reset link with be mailed to you.',
+      copy: 'Click “Forgot password” from the login page or “Change password” from your profile page. A reset link with be mailed to you.',
       'visible': false
     },
     {
@@ -37,25 +37,19 @@ const Slider = () => {
   ])
 
   const handleClick = (e, id) => {
-    // I only want the currentIndex of the item to be true.
-    // All other items: previous and the indexes after, to be false.
-
     let previousIndex = id - 1;
     let precedingIndex = id + 1;
     let updatedQuestions = [...questions]
     let index = updatedQuestions.findIndex(item => id === item.id);
 
     if (previousIndex < 0) {
-      // The first and last elements of the array need to show if there is no previous or preceding index
-      // If there is no preceding/previous index, set the current element's visible property to 'true'.
       updatedQuestions[index]['visible'] = !updatedQuestions[index]['visible'];
       updatedQuestions[precedingIndex]['visible'] = false;
       console.log('No previous index or preceding index', index);
     } else if (precedingIndex > 4) {
       updatedQuestions[index]['visible'] = !updatedQuestions[index]['visible'];
       updatedQuestions[previousIndex]['visible'] = false;
-    }
-    else if (previousIndex > 0 || precedingIndex < 4) {
+    } else  {
       updatedQuestions[previousIndex]['visible'] = false;
       updatedQuestions[precedingIndex]['visible'] = false;
       updatedQuestions[index]['visible'] = !updatedQuestions[index]['visible'];

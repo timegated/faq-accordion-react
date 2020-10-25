@@ -42,13 +42,14 @@ padding: 5rem;
   width: 87%;
   max-width: 920px;
   min-width: 320px;
+  min-height: 50vh;
   border-radius: 30px;
   margin: 5rem auto;
 }
 `;
 
 export const FaqContainer = styled.section`
-  flex: 1 0 50%;
+  flex: 1 0 60%;
 `;
 
 export const FaqTitle = styled.h1`
@@ -58,7 +59,7 @@ export const FaqTitle = styled.h1`
 `;
 
 export const ImgContainer = styled.section`
-  flex: 1 0 50%;
+  flex: 1 0 40%;
 `;
 
 export const WomanDesktop = styled.img`
