@@ -10,34 +10,39 @@ const size = {
   laptopL: '1440px',
   desktop: '1920px',
   desktopL: '2560px'
-}
+};
 
 const device = {
   mobileS: `(min-width: ${size.mobileS})`,
   mobileM: `(min-width: ${size.mobileM})`,
   mobileL: `(min-width: ${size.mobileL})`,
   tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
+  laptop: `(max-width: ${size.laptop})`,
   laptopL: `(min-width: ${size.laptopL})`,
   desktop: `(min-width: ${size.desktop})`,
   desktopL: `(min-width: ${size.desktopL})`,
-}
+};
+
 // App
 export const AccordionContainer = styled.div`
 display: flex;
 flex-direction: column;
+position: relative;
 align-items: center;
 box-shadow: 1px 1px 10px #000;
+padding: 5rem;
+overflow-x: hidden;
 
-@media (min-width: 768px) {
+@media ${device.laptopL} {
   flex-direction: row;
   background-color: #FFF;
   background-image: url(${backgroundDesktop});
-  background-size: left;
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position: -300px -100px;
-  width: 75rem;
-  height: 85vh;
+  background-position: -100px 50px;
+  width: 87%;
+  max-width: 920px;
+  min-width: 320px;
   border-radius: 30px;
   margin: 5rem auto;
 }
@@ -45,7 +50,6 @@ box-shadow: 1px 1px 10px #000;
 
 export const FaqContainer = styled.div`
   flex: 1 0 50%;
-  height: 65vh;
 `;
 
 export const FaqTitle = styled.h1`
@@ -55,22 +59,29 @@ export const FaqTitle = styled.h1`
 `;
 
 export const ImgContainer = styled.div`
-  flex: 1 0  50%;
+  flex: 1 0 50%;
+`;
+
+export const WomanDesktop = styled.img`
+  position: relative;
+  top: 8px;
+  @media ${device.laptopL} {
+    left: -120px;
+    bottom: 0;
+  }
 `;
 
 export const DesktopBox = styled.img`
-  position: fixed;
-  top: 45%;
-  left: 17%;
+  display: block;
+  position: absolute;
+  top: 200px;
+  left: -60px;
+  z-index: 1000;
   animation: 3s infinite bounce;
   @keyframes bounce {
     50% {
       transform: translateY(3%);
     }
-  }
-
-  @media (min-width: 768px) {
-    display: none;
   }
 `;
 
@@ -117,7 +128,7 @@ export const ListIconActive = styled.img`
 export const CopyText = styled.p`
   max-width: 32em;
   color: var(--text-color-2);
-  animation: 1s ease-in slidedown;
+  animation: 0.5s ease-in slidedown;
 
   @keyframes slidedown {
     0% {

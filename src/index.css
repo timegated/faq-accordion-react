@@ -18,7 +18,5 @@
   padding: 0;
   overflow-y: hidden;
   background: var(--bg-gradient);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh;
 }
