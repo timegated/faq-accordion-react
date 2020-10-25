@@ -8,38 +8,38 @@ const Slider = () => {
       id: 0,
       text: 'How many team members can I invite?',
       copy: 'You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.',
-      'visible': false
+      visible: false
     },
     {
       id:1,
       text: 'What is the maximum file upload size?',
       copy: 'No more than 2GB. All files in your account must fit your allotted storage space.',
-      'visible': false
+      visible: false
     },
     {
       id:2,
       text: 'How do I reset my password?',
       copy: 'Click “Forgot password” from the login page or “Change password” from your profile page. A reset link with be mailed to you.',
-      'visible': false
+      visible: false
     },
     {
       id:3,
       text: 'Can I cancel my subscription?',
       copy: 'Yes! Send us a message and we\'ll process your request no questions asked.',
-      'visible': false
+      visible: false
     },
     {
       id: 4,
       text: 'Do you provide additional support?',
       copy: 'Chat and email support is available 24/7. Phone lines are open during normal business hours.',
-      'visible': false
+      visible: false
     },
   ])
 
   const handleClick = (e, id) => {
     let previousIndex = id - 1;
     let precedingIndex = id + 1;
-    let updatedQuestions = [...questions]
+    let updatedQuestions = [...questions];
     let index = updatedQuestions.findIndex(item => id === item.id);
 
     if (previousIndex < 0) {
@@ -55,6 +55,7 @@ const Slider = () => {
       updatedQuestions[index]['visible'] = !updatedQuestions[index]['visible'];
     }
 
+    
     showQuestions(updatedQuestions);
     e.preventDefault();
   };
@@ -68,9 +69,9 @@ const Slider = () => {
         return <ListChild key={question.id}>
           <ListLink href="#" rel="noopener noreferrer" onClick={(e) => handleClick(e, question.id)} >
             {question.text}
-          {questions[index]['visible'] ? <ListIconActive src={iconArrow} alt="arrow up" />: <ListIcon src={iconArrow} alt="arrow down" /> }  
+          {questions[index].visible ? <ListIconActive src={iconArrow} alt="arrow up" />: <ListIcon src={iconArrow} alt="arrow down" /> }  
           </ListLink>
-          {questions[index]['visible'] ? <CopyText>{question.copy}</CopyText> : ''}
+          {questions[index].visible ? <CopyText>{question.copy}</CopyText> : ''}
         </ListChild>
       })}
       </ListParent>

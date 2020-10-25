@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import backgroundDesktop from '../../images/bg-pattern-desktop.svg';
-
+import backgroundMobile from '../../images/bg-pattern-mobile.svg';
 const size = {
   mobileS: '320px',
   mobileM: '375px',
@@ -26,15 +26,21 @@ const device = {
 // App
 export const Faq = styled.main`
 display: flex;
+background-color: #FFF;
 flex-direction: column;
 position: relative;
 align-items: center;
 box-shadow: 1px 1px 10px #000;
 padding: 5rem;
+background-image: url(${backgroundMobile});
+background-repeat: no-repeat;
+background-position: 200px 200px;
+background-size: 50%;
+margin: 5rem;
+border-radius: 30px;
 
 @media ${device.laptopL} {
   flex-direction: row;
-  background-color: #FFF;
   background-image: url(${backgroundDesktop});
   background-size: 50%;
   background-repeat: no-repeat;
@@ -49,35 +55,50 @@ padding: 5rem;
 `;
 
 export const FaqContainer = styled.section`
-  flex: 1 0 60%;
+  @media ${device.laptopL} {
+  flex: 1 0 50%;
+
+  }
 `;
 
 export const FaqTitle = styled.h1`
   color: var(--desat-blue);
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: var(--font-weight-2);
+  font-size: 32px;
+  line-height: 1.875;
 `;
 
 export const ImgContainer = styled.section`
-  flex: 1 0 40%;
+  @media ${device.laptopL} {
+    flex: 1 0 50%;
+
+  }
 `;
 
 export const WomanDesktop = styled.img`
   position: relative;
-  top: 8px;
+  top:-165px;
+  overflow: hidden;
   @media ${device.laptopL} {
     left: -120px;
     bottom: 0;
+    top: 0px;
   }
 `;
 
 export const DesktopBox = styled.img`
   display: block;
   position: absolute;
-  top: 200px;
-  left: -60px;
+  top: 10px;
+  left: 150px;
   z-index: 1000;
   animation: 3s infinite bounce;
+@media ${device.laptopL} {
+  top: 220px;
+  left: -60px;
+}
+  
   @keyframes bounce {
     50% {
       transform: translateY(3%);
@@ -96,8 +117,8 @@ export const ListParent = styled.ul`
 
 export const ListChild = styled.li`
   padding: 0.75rem;
-  width: 65%;
   border-bottom: 1px solid var(--divider-color);
+  max-width: 24em;
 `;
 
 
@@ -107,6 +128,7 @@ export const ListLink = styled.a`
   justify-content: space-between;
   text-decoration: none;
   color: var(--text-color-1);
+  font-size: 20px;
   cursor: pointer;
   &:hover {
     color: var(--soft-red);
@@ -123,13 +145,14 @@ export const ListIconActive = styled.img`
   width: 15px;
   height: 10px;
   transform: rotate(180deg);
+  transition: transform 1s ease-in;
 `;
 
 export const CopyText = styled.p`
   max-width: 32em;
   color: var(--text-color-2);
   animation: 0.5s ease-in slidedown;
-
+  font-size: 18px;
   @keyframes slidedown {
     0% {
       opacity: 0;

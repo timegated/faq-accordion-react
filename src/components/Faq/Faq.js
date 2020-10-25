@@ -7,8 +7,8 @@ import { Faq, FaqContainer, FaqTitle, ImgContainer, WomanDesktop, DesktopBox } f
 const FaqComponent = () => {  
   return (
     <Faq>
+      <DesktopBox src={boxDesktop} alt="floating cube with at-icon" />
       <ImgContainer>
-        <DesktopBox src={boxDesktop} alt="floating cube with at-icon"/>        
         <WomanDesktop src={womanDesktop} alt="woman accessing internet with desktop" />
       </ImgContainer>
       <FaqContainer>
