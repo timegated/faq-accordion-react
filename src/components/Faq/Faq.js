@@ -4,7 +4,7 @@ import womanDesktop from '../../images/illustration-woman-online-desktop.svg';
 import boxDesktop from '../../images/illustration-box-desktop.svg';
 import { Faq, FaqContainer, FaqTitle, ImgContainer, WomanDesktop, DesktopBox } from '../styled/styled';
 
-const Faq = () => {  
+const FaqComponent = () => {  
   return (
     <Faq>
       <ImgContainer>
@@ -19,4 +19,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default FaqComponent

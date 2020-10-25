@@ -31,7 +31,6 @@ position: relative;
 align-items: center;
 box-shadow: 1px 1px 10px #000;
 padding: 5rem;
-overflow-x: hidden;
 
 @media ${device.laptopL} {
   flex-direction: row;
