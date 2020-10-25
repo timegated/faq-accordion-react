@@ -24,7 +24,7 @@ const device = {
 };
 
 // App
-export const AccordionContainer = styled.div`
+export const Faq = styled.main`
 display: flex;
 flex-direction: column;
 position: relative;
@@ -48,7 +48,7 @@ overflow-x: hidden;
 }
 `;
 
-export const FaqContainer = styled.div`
+export const FaqContainer = styled.section`
   flex: 1 0 50%;
 `;
 
@@ -58,7 +58,7 @@ export const FaqTitle = styled.h1`
   font-weight: var(--font-weight-2);
 `;
 
-export const ImgContainer = styled.div`
+export const ImgContainer = styled.section`
   flex: 1 0 50%;
 `;
 

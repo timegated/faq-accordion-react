@@ -1,12 +1,12 @@
 import React from 'react'
-import Accordion from './components/Accordion/Accordion';
+import Faq from './components/Faq/Faq';
 
 
 const App = () => {
 
   return (
     <>
-      <Accordion />
+      <Faq />
     </>
   )
 }
